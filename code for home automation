@@ -1,0 +1,23 @@
+#define BLYNK_PRINT Serial
+#define BLYNK_TEMPLATE_ID "TMPL3EvesO9zM"
+#define BLYNK_TEMPLATE_NAME "HOME"
+#define BLYNK_AUTH_TOKEN "_40B6QnlVFS6YMG3t4xmQakYug5UC7zW"
+
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
+
+char auth[] = BLYNK_AUTH_TOKEN;
+
+char ssid[] = "wifiName";
+char pass[] = "passWord";
+
+void setup()
+{
+  Serial.begin(9600);
+
+  Blynk.begin(auth, ssid, pass);
+}
+void loop()
+{
+  Blynk.run();
+}
